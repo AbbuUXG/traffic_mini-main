@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Stream</title>
+</head>
+<body>
+    <h1>Traffic ohhh</h1>
+    <button onclick="toggleCamera()">Detect Signs!!</button>
+    <br><br>
+    <img id="video" src="" width="640" height="480" style="display: none;">
+    
+    <script>
+        var videoElement = document.getElementById("video");
+        var streaming = false;
+
+        function toggleCamera() {
+            if (streaming) {
+                videoElement.src = "";
+                videoElement.style.display = "none";
+                streaming = false;
+            } else {
+                videoElement.src = "{{ url_for('video') }}";
+                videoElement.style.display = "block";
+                streaming = true;
+            }
+        }
+    </script>
+</body>
+</html>
