@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Video Stream</title>
+    <title>traffic sign</title>
+    <link rel="stylesheet" href="../static/style.css"  href="//use.fontawesome.com/releases/v5.7.2/css/all.css">
 </head>
 <body>
-    <h1>Traffic ohhh</h1>
-    <button onclick="toggleCamera()">Detect Signs!!</button>
+    
+    <header>
+        <div class="hero-content">
+          <h1>Traffic Sign Recognition System</h1>
+          <p>Real-time recognition of traffic signs using computer vision and deep learning</p>
+        </div>
+      </header>
+      <section id="about">
+        <div class="container">
+          <h2>About</h2>
+          <p>
+            The Traffic Sign Recognition System is an application that uses computer vision and deep learning techniques to identify traffic signs in real time.
+            It can detect various traffic signs such as speed limits, stop signs, yield signs, and more.
+            The system analyzes the input from a camera feed and provides information about the detected signs, including the class and probability.
+          </p>
+        </div>
+      </section>
+    <button onclick="toggleCamera()" style=" background-color:#46ff54 ;height:50px;width:150px;text">Detect Signs!!</button>
     <br><br>
-    <img id="video" src="" width="640" height="480" style="display: none;">
+    <center><img id="video" src="" width="640" height="480" style="display: none;"></center>
     
     <script>
         var videoElement = document.getElementById("video");
@@ -25,5 +42,14 @@
             }
         }
     </script>
+    <footer>
+        <div class="container">
+          <p>Created by: 
+            Mohammed Abdul Malik (160420737087)|
+            Mohammed Ismail (160420737119)|
+            Neaman Afsar Baig (1604207378)|
+        </p>
+        </div>
+      </footer>
 </body>
 </html>
