@@ -1,14 +1,32 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+   
     padding: 20px;
     text-align: center;
-    background-color: #fafafa;
-
+  
+   
+    margin: 20px 0;
+    background:linear-gradient(45deg,#ee0b0b, #f3eba3,#020064);;
+    font-family: 'Roboto Mono', monospace;
+    animation: change 7s  infinite;
+    background-size:400% 400%;
+  }
+  @keyframes change {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
 }
 
+
+
 h1 {
-    color: #e90000;
+    color: #fcfcfc;
 }
 
 .video-container {

@@ -83,8 +83,9 @@ def generate_frames():
 
             # Display class and probability
             class_name = class_names.get(classIndex, 'Unknown')
-            cv2.putText(frame, "CLASS: " + class_name, (20, 35), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 0, 255), 2, cv2.LINE_AA)
-            cv2.putText(frame, "PROBABILITY: " + str(round(probabilityValue * 100, 2)) + "%", (20, 75), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 0, 255), 2, cv2.LINE_AA)
+            cv2.putText(frame, "CLASS: " + class_name, (20, 35), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255, 255, 255), 2, cv2.LINE_AA)
+            cv2.putText(frame, "PROBABILITY: " + str(round(probabilityValue * 100, 2)) + "%", (20, 75), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255, 255, 255), 2, cv2.LINE_AA)
+
 
             ret, buffer = cv2.imencode('.jpg', frame)
             frame = buffer.tobytes()
